@@ -1,0 +1,30 @@
+.swiper-button-prev{
+    width: 40px;
+    height: 40px;
+    background: #000;    
+    padding: 10px;
+    color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 10px !important;
+}
+
+.swiper-button-next{
+    width: 40px;
+    height: 40px;
+    background: #000;    
+    padding: 10px;
+    color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 10px !important;
+}
+
+svg.swiper-navigation-icon {
+    color: white;
+}
+
