@@ -1,6 +1,5 @@
 "use client"
 import Image from 'next/image'
-import Badroom from "../../public/badroom.jpg"
 import Link from 'next/link'
 
 
@@ -9,7 +8,13 @@ const BedRoomsection = () => {
     <div className="pb-[80px] md:pb-[100px]">
       <div className="container mx-auto px-4">
         <div className="w-full h-[350px] sm:h-[450px] md:h-[550px] relative rounded-xl overflow-hidden">   
-          <Image className="w-full h-full object-cover" src={Badroom} alt="Bedroom Section" />
+          <Image 
+            className="w-full h-full object-cover" 
+            src="/badroom.jpg" 
+            alt="Bedroom Section"
+            fill
+            sizes="100vw"
+          />
       
           <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.7)] flex flex-col justify-center items-center px-4 sm:px-10 md:px-[100px]">
             <div className="text-center max-w-[95%] sm:max-w-[600px] md:max-w-[700px]">

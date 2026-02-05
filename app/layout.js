@@ -12,10 +12,12 @@ const geistMono = Geist_Mono({
 const googleJost = Jost({
   variable: "--font-Jost",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
 });
 const googleLato = Lato({
   variable: "--font-Lato",
   weight: ["100", "300", "400", "700", "900"],
+  subsets: ["latin"],
 });
 
 export const metadata = {
