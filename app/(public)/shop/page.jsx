@@ -1,6 +1,8 @@
 import React, { Suspense } from 'react'
 import ShopPage from './components/ShopPage'
 
+export const dynamic = 'force-dynamic';
+
 const page = () => {
   return (
     <div>

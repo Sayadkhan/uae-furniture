@@ -5,6 +5,8 @@ import AboutTabs from '@/components/About_page/AboutTabs'
 import AboutUs from '@/components/About_page/AboutUs'
 import React from 'react'
 
+export const dynamic = 'force-dynamic';
+
 const page = () => {
   return (
     <div>

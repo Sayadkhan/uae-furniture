@@ -1,6 +1,8 @@
 import React, { Suspense } from 'react'
 import CurtainsDetails from '../components/CurtainsDetails'
 
+export const dynamic = 'force-dynamic';
+
 const page = async ({params}) => {
   const {id} = await params
   return (

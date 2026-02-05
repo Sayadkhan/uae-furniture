@@ -1,24 +1,11 @@
-
-import { connectDB } from '@/lib/mongodb';
-import Product from '@/model/Product';
 import React, { Suspense } from 'react'
 import ProductList from './ProductList';
 
-async function getProduct(id) { 
-  await connectDB(); 
-  const product = await Product.find({ subcategory: id }) 
-  .populate("category", "name")
-  .populate("subcategory", "name")
-  .lean(); 
-   
-  if (!product) return null; 
-  
-  return JSON.parse(JSON.stringify(product)); 
-}
+export const dynamic = 'force-dynamic';
 
-const page = ({params}) => {
+const page = async ({params}) => {
   
-  const {id} =  params;
+  const {id} = await params;
 
 
    return (

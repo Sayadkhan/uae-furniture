@@ -2,8 +2,6 @@ import { Geist, Geist_Mono, Jost, Lato } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import ReduxProvider from "@/Providers/ReduxProvider";
-import { FaWhatsapp } from "react-icons/fa";
-import { getWhatsappNumber } from "./admin/whatsapp/actions/getWhatsapp";
 import WhatsAppFloating from "@/components/Whatsapp/WhatsAppFloating";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
