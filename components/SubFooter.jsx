@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import PaymentImg from "../public/payment.png";
 
 const SubFooter = () => {
   return (
@@ -10,7 +9,7 @@ const SubFooter = () => {
           © 2025 Furnista_Default
         </p>
         <Image
-          src={PaymentImg}
+          src="/payment.png"
           alt="Payment Methods"
           width={220}
           height={30}

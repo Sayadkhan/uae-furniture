@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import orderImg from "../../public/hero-2.jpg"
 import Image from "next/image";
 
 const CheckOutRightSide = () => {
@@ -17,7 +16,7 @@ const CheckOutRightSide = () => {
         <div className="flex justify-between items-start border-b pb-4">
           <div className="flex gap-3">
             <div className="w-12 h-12 bg-gray-100 rounded-md flex items-center justify-center">                
-              <Image src={orderImg} alt="Product" className="w-10 h-10 object-contain"/>
+              <Image src="/hero-2.jpg" alt="Product" width={40} height={40} className="w-10 h-10 object-contain"/>
             </div>
             <div>
               <p className="text-[18px] font-medium"> ClosetMaid 8987 Stackable 3-Shelf Organizer</p>

@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import CountUp from "react-countup";
-import CounterImg from "../../public/about-1.png"
 
 const AboutCouter = () => {
     const stats = [
@@ -12,7 +11,13 @@ const AboutCouter = () => {
     ];
   return (
     <div className="w-full h-[350px] relative">
-        <Image className="w-full h-full object-cover" src={CounterImg} alt="" />
+        <Image 
+          className="w-full h-full object-cover" 
+          src="/about-1.png" 
+          alt="About Us Counter Background"
+          fill
+          sizes="100vw"
+        />
         <div className="flex items-center absolute inset-0 w-full h-full bg-[rgba(0,0,0,0.7)]">
             <div className="container"> 
                 <div className="relative container grid grid-cols-2 md:grid-cols-4 gap-8 text-center ">

@@ -1,21 +1,14 @@
-FROM node:20-slim AS base
-
-# Install system dependencies needed for sharp
-RUN apt-get update && apt-get install -y \
-    libc6 \
-    libvips-dev \
-    && rm -rf /var/lib/apt/lists/*
+FROM node:20-alpine AS base
 
 # Install dependencies only when needed
 FROM base AS deps
+# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 # Install dependencies
 COPY package.json package-lock.json* pnpm-lock.yaml* ./
-
-# Install sharp for the correct platform first, then other deps
-RUN npm install --platform=linux --arch=x64 sharp
-RUN npm install
+RUN npm ci
 
 # Rebuild the source code only when needed
 FROM base AS builder
@@ -36,7 +29,7 @@ ENV CLOUDINARY_API_KEY=$CLOUDINARY_API_KEY
 ENV CLOUDINARY_API_SECRET=$CLOUDINARY_API_SECRET
 ENV JWT_SECRET=$JWT_SECRET
 
-# Next.js collects completely anonymous telemetry data about general usage.
+# Disable telemetry
 ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN npm run build
