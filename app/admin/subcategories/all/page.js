@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import AllSubCategory from "./AllsubCategory";
+export const dynamic = "force-dynamic";
 
 const page = () => {
   return (
